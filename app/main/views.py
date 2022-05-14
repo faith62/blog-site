@@ -1,9 +1,8 @@
-from turtle import title
-from flask import render_template
-from app import app
+from flask import render_template,redirect,request,url_for
+from . import main
 
 # Views
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
