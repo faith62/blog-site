@@ -3,7 +3,7 @@ from app.models import User
 
 class UserModelTest(unittest.TestCase):
 
-    def setUp(self):
+    def setUp(self): # creates an instance of our User class 
         self.new_user = User(password = 'banana')
 
     def test_password_setter(self):
