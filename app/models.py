@@ -1,4 +1,5 @@
 from .import db
+from werkzeug.security import generate_password_hash,check_password_hash
 
 class User(db.Model):
     __tablename__ = 'users'
@@ -6,6 +7,17 @@ class User(db.Model):
     username = db.Column(db.String(255))
     role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))
     pass_secure = db.Column(db.String(255))
+    @property # decorator to create a write only class
+    def password(self):
+        raise AttributeError('You cannot read the password attribute') #block access to the password property
+
+    @password.setter
+    def password(self, password):
+        self.pass_secure = generate_password_hash(password)
+
+
+    def verify_password(self,password): #takes in a password, hashes it and compares it to the hashed password to check if they are the same.
+        return check_password_hash(self.pass_secure,password)
 
 
 
