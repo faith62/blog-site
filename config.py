@@ -2,7 +2,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://faith:123456@localhost/watchlist'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://faith:1234@localhost/watchlist'
 
 
 class ProdConfig(Config):
