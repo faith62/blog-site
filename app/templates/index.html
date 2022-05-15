@@ -7,7 +7,12 @@
 {% endblock %}
 <!-- Content block -->
     <!-- pitch section -->
- <div>
-   pitch
+
+ <div class="container">
+  {% if current_user.is_authenticated%}
+  <h1>Hello {{current_user.username}}</h1>
+  {% else %}
+    <h1>Hello stranger</h1>
+  {%endif%}
  </div>    
   
