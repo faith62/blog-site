@@ -19,7 +19,7 @@ def create_app(config_name):
 
     # Creating the app configurations
     app.config.from_object(config_options[config_name])
-    config_options[config_name].init_app(app)
+    # config_options[config_name].init_app(app)
 
     # Initializing flask extensions
     bootstrap.init_app(app)
