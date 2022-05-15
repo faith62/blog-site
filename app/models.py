@@ -9,12 +9,12 @@ def load_user(user_id):
 
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
-    
+
     id = db.Column(db.Integer,primary_key = True)
     username = db.Column(db.String(255))
     email = db.Column(db.String(255),unique = True,index = True)
     role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))
-    pass_hash = db.Column(db.String(255))
+    password_hash = db.Column(db.String(255))
     
     @property # decorator to create a write only class
     def password(self):
@@ -26,7 +26,7 @@ class User(UserMixin, db.Model):
 
 
     def verify_password(self,password): #takes in a password, hashes it and compares it to the hashed password to check if they are the same.
-        return check_password_hash(self.pass_hash,password)
+        return check_password_hash(self.password_hash,password)
 
 
     def __repr__(self):
