@@ -1,8 +1,10 @@
 from flask import render_template,redirect,request,url_for
 from . import main
+from flask_login import login_required
 
 # Views
 @main.route('/')
+@login_required #intercept a request and check if the user is authenticated
 def index():
 
     '''
