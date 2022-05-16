@@ -16,6 +16,14 @@
         {% endif %}
     </head>
     <body>
+
+        {%block styles %}
+        {{super()}}
+        <!--Importing the simple mde css and js files  -->
+        {{ simplemde.css}}
+        {{ simplemde.js }}
+
+        {% endblock %}
         <!-- Content block -->
 
         {% block content %}

@@ -5,6 +5,7 @@ from ..models import User
 from .forms import UpdateProfile
 from .. import db, photos
 
+
 # Views
 @main.route('/')
 @login_required #intercept a request and check if the user is authenticated
