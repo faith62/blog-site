@@ -14,7 +14,8 @@ class User(UserMixin, db.Model):
  
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
-    password_secure = db.Column(db.String(255))
+    # password = db.Column(db.String(255), nullable=False)
+    # password_secure = db.Column(db.String(255))
     password_hash = db.Column(db.String(255))
 
     
@@ -27,7 +28,7 @@ class User(UserMixin, db.Model):
         self.pass_secure = generate_password_hash(password)
 
 
-    def verify_password(self,password): #takes in a password, hashes it and compares it to the hashed password to check if they are the same.
+    def check_password(self,password): #takes in a password, hashes it and compares it to the hashed password to check if they are the same.
         return check_password_hash(self.password_hash,password)
 
 

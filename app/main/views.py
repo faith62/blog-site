@@ -18,7 +18,7 @@ def index():
     return render_template('index.html')
 
 @main.route('/posts')
-@login_required #intercept a request and check if the user is authenticated
+# @login_required #intercept a request and check if the user is authenticated
 def posts():
     posts = Post.query.all()
     likes = Upvote.query.all()
