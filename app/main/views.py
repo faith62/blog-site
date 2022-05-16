@@ -1,14 +1,14 @@
 from flask import render_template,redirect,request,url_for,abort
 from . import main
-from flask_login import login_required
-from ..models import User
+from flask_login import current_user, login_required
+from ..models import User,Post,Upvote,Downvote,Comment
 from .forms import UpdateProfile
 from .. import db, photos
 
 
 # Views
 @main.route('/')
-@login_required #intercept a request and check if the user is authenticated
+
 def index():
 
     '''
@@ -16,6 +16,14 @@ def index():
     '''
     title = 'one minute pitch'
     return render_template('index.html',title=title)
+
+@main.route('/posts')
+@login_required #intercept a request and check if the user is authenticated
+def posts():
+    posts = Post.query.all()
+    likes = Upvote.query.all()
+    user = current_user
+    return render_template('pitch_display.html', posts=posts, likes=likes, user=user)
 
 @main.route('/user/<uname>')
 def profile(uname):
