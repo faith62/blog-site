@@ -1,7 +1,10 @@
 {% extends 'auth/auth-base.html'%}
 {% import 'bootstrap/wtf.html' as wtf%}
 
-{% block content %}
+
+<body style="background-color: aliceblue;">
+  
+  {% block content %}
 <div class="container"> 
     <div class="row">
       <div class= "col-md-2"> </div>
@@ -14,7 +17,11 @@
         </div>
       {% endfor %}
       <!-- Login form -->
-      {{wtf.quick_form(form)}}
+      <div class="card" style="width: 50rem;">
+        <div class="card-body">
+          {{wtf.quick_form(form)}}
+        </div>
+      </div>
       <p> Don't have an account? <a href="{{url_for('auth.register')}}">Sign up here</a></p>
      </div>
      <div clas="col-md-2"> </div>
@@ -22,3 +29,5 @@
 </div>
 
 {% endblock%}
+
+</body>
