@@ -1,15 +1,24 @@
 {% extends 'auth/auth-base.html'%}
 {% import 'bootstrap/wtf.html' as wtf%}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+
+{% endblock %}
 
 {% block content %}
 <div class="container">
 <div class="row">
 <div class="col-md-2"> </div>
-<div class="col-md-8">
+ <!-- Login form -->
+ <div style="background-color: rgba(255, 255, 255, 0.76);margin-top:30vh; border-radius: 5px; " class="card" style="width: 20rem;">
+    <div class="card-body">
+        {{wtf.quick_form(registration_form)}}
+    </div>
+   
 
-{{wtf.quick_form(registration_form)}}
+  </div>
 
-</div>
 <div class="col-md-2"></div>
 </div>
 </div>

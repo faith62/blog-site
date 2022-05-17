@@ -60,16 +60,13 @@ def update_profile(uname):
 def new_post():
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(category=form.category.data, post=form.post.data,title=form.title.data, user_id= current_user)
-        # flash('Your pitch has been created')
-        db.session.add(post)
-        db.session.commit()
-        # title = form.title.data
-        # post = form.post.data
-        # category = form.category.data
-        # user_id = current_user._get_current_object().id
-        # post_obj = Post(post=post, title=title, category=category, user_id=current_user)
-        # post_obj.save()
+       
+        title = form.title.data
+        post = form.post.data
+        category = form.category.data
+        user_id = current_user._get_current_object().id
+        post_obj = Post(post=post, title=title, category=category, user_id=user_id)
+        post_obj.save()
         return redirect(url_for('main.index'))
     return render_template('pitch.html', form=form)
     
