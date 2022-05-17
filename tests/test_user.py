@@ -13,4 +13,4 @@ class UserModelTest(unittest.TestCase):
                 self.new_user.password
 
     def test_password_verification(self): #confirms that our password_hash can be verified when we pass in the correct password.
-            self.assertTrue(self.new_user.check_password('banana'))
+            self.assertTrue(self.new_user.verify_password('banana'))

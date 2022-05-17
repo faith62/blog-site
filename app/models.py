@@ -28,7 +28,7 @@ class User(UserMixin, db.Model):
         self.password_hash = generate_password_hash(password)
 
 
-    def check_password(self,password): #takes in a password, hashes it and compares it to the hashed password to check if they are the same.
+    def verify_password(self,password): #takes in a password, hashes it and compares it to the hashed password to check if they are the same.
         return check_password_hash(self.password_hash,password)
 
 
