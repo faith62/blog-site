@@ -4,6 +4,10 @@ from flask_login import UserMixin, current_user
 from . import login_manager
 from datetime import datetime
 
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
 
@@ -36,9 +40,7 @@ class User(UserMixin, db.Model):
         return f'User {self.username}'
 
 
-@login_manager.user_loader
-def load_user(user_id):
-    return User.query.get(int(user_id))
+
 
 
 class Role(db.Model): #define all the different roles
