@@ -16,9 +16,12 @@
         <div style="background-color: rgba(255, 255, 255, 0.829);" class="card">
             <div class="card-body">
                 <p>{{my_post.post}}</p>
+                <p><br> Title: {{my_post.title}}</p>
                 <p><br> Category: {{my_post.category}}</p>
-            </div>
-            <div class="card-footer foot_flex d-block mx-auto">
+                <p><br> Created on: {{my_post.date_created}}</p>
+                <hr>
+            <!-- </div>
+            <div class="card-footer foot_flex d-block mx-auto"> -->
                 <a href="/comment/{{my_post.id}}"><button class="btn btn-info">Comment</button></a>
                 <a href="/like/{{my_post.id}}"><button class="btn btn-success">Like {{my_post.up_vote.count()}}</button></a>
                 <h1>{{upvotes}}</h1>
