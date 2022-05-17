@@ -1,9 +1,7 @@
 {% extends 'bootstrap/base.html'%}
 
  <!-- Navbar block  --> 
-{% block navbar %}
-    {% include 'navbar.html' %}
-{% endblock %}
+
 
 {% block styles%}
 {{super()}}
@@ -18,8 +16,14 @@
 {% endblock %}
 
 {% block content %}
-<body style="background-image: url(https://images.unsplash.com/photo-1484100356142-db6ab6244067?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1067&q=80);">
-    
-</body>
+<div class="main">
+
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
+</div>
 {% endblock%}
+
+
+
   
