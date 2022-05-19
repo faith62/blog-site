@@ -1,13 +1,17 @@
 {% extends 'bootstrap/base.html'%}
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
 
 {% block navbar %}
     {% include 'navbar.html' %}
 {% endblock %}
 
 {% block content %}
-<div class="main" >
+<div class="main" style="background-image: url('https://images.unsplash.com/photo-1649945222171-6ed39b7f2eca?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687');background-size: cover; 
+background-repeat: no-repeat;
+">
 
 
 </div>
