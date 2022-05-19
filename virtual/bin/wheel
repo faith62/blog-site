@@ -1,4 +1,4 @@
-#!/home/faith/Desktop/Flaskip3/Pitch/virtual/bin/python
+#!/home/faith/Documents/Flask-proj/Blog/virtual/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
