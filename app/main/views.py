@@ -1,5 +1,7 @@
 from email import contentmanager
 from flask import render_template,redirect,request,url_for,abort
+
+from app.requests import random_quotes
 from . import main
 from flask_login import current_user, login_required
 from ..models import User,Post,Upvote,Downvote,Comment
@@ -16,15 +18,12 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    fef= requests.get('http://quotes.stormconsultancy.co.uk/random.json')
-    data=fef.content
-    json.data= json.loads(data)
-    posts = Post.query.all()
-    comments= comment.query.all()
-    user=User.query.all()
+    qot= random_quotes()
+    qots=qot["quote"]
+    qots_author =qot ["author"]
 
      
-    return render_template('index.html', user=user,posts=posts, comments=comments, data=json.data)
+    return render_template('index.html', qots=qots, qots_author=qots_author)
 
 @main.route('/posts')
 # @login_required #intercept a request and check if the user is authenticated
