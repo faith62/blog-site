@@ -1,8 +1,7 @@
-# Pitch
+# Blog-site
 ### Project description
 
-An application that allow a user to submit a one minute pitch, organize pitches by category and the new posts should be displayed first.
-
+A personal blogging website where one can create and share opinions and other users can read and comment on them. Additionally, add a feature that displays random quotes to inspire  users. 
 
 ### By Faith Chemutai ,15/05/2022
 ## Setup/instalation Requirements
@@ -51,4 +50,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-# Pitch
+# Blog-site

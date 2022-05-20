@@ -5,7 +5,7 @@ class Config:
     General configuration parent class
     '''
     SECRET_KEY = os.environ.get('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI = 'postgresql-horizontal-91879'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://faith:1234@localhost/pitch'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     #  email configurations
