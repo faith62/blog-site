@@ -7,6 +7,14 @@
 
 {% endblock %}
 {% block content %}
-<div>{{ display_pitches(posts) }}</div>
-<div class="">{{display_comments(comments)}}</div>
+
+<div class="container-fluid" style=" background-image: url('https://images.unsplash.com/photo-1649945222171-6ed39b7f2eca?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687');background-size: cover; min-height: 1000px;">
+    <div>{{ display_pitches(posts) }}</div>
+    <div class="">{{display_comments(comments)}}</div>
+</div>
+<div style="position:absolute; bottom:0; margin-left: 20%;" class="container">
+    <h1 style="color: white; text-align: center;font-style: italic">"{{qots}}"</h1>
+    <p style="color: white;">{{qots_author}}</p>
+   
+</div>
 {% endblock %}

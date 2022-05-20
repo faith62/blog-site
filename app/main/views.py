@@ -27,12 +27,15 @@ def index():
 @main.route('/posts')
 # @login_required #intercept a request and check if the user is authenticated
 def posts():
+    qot= random_quotes()
+    qots=qot["quote"]
+    qots_author =qot ["author"]
 
     posts = Post.query.all()
     likes = Upvote.query.all()
     user = User.query.all()
     
-    return render_template('pitch_display.html', posts=posts, likes=likes, user=user)
+    return render_template('pitch_display.html', posts=posts, likes=likes, user=user,qots=qots, qots_author=qots_author)
 
 @main.route('/user/<uname>')
 def profile(uname):
