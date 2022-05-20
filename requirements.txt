@@ -15,7 +15,7 @@ Flask-Migrate==2.7.0
 Flask-Script==2.0.6
 Flask-SimpleMDE==0.3.0
 Flask-SQLAlchemy==2.5.1
-Flask-reuoloaded==0.2.1
+Flask-reuploaded==0.2.1
 Flask-WTF==1.0.1
 greenlet==1.1.2
 gunicorn==20.1.0
