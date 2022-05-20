@@ -1,4 +1,4 @@
-import requests
+from .import requests
 
 def random_quotes():
     url='http://quotes.stormconsultancy.co.uk/random.json'
@@ -6,4 +6,3 @@ def random_quotes():
     quotes=quote.json()
 
     return quotes
-    

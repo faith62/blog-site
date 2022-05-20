@@ -1,4 +1,4 @@
-from email import contentmanager
+
 from flask import render_template,redirect,request,url_for,abort
 
 from app.requests import random_quotes
@@ -7,7 +7,6 @@ from flask_login import current_user, login_required
 from ..models import User,Post,Upvote,Downvote,Comment
 from .forms import CommentForm, PostForm, UpdateProfile
 from .. import db, photos
-import requests, json
 
 
 # Views
